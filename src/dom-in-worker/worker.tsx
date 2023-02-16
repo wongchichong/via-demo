@@ -2,8 +2,6 @@
 
 //first line before voby initialization
 import * as React from 'voby'
-// // // import { createRoot } from 'react-dom/client'
-// // // import { render } from '../../via/via-dom'
 import { render } from 'voby/via'
 
 declare global {
