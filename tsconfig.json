@@ -1,0 +1,71 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "module": "ESNext",
+        "target": "ES2021", //"es6",
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "jsxImportSource": "voby/via",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        // "isolatedModules": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "rootDir": "./src",
+        "declaration": true,
+        "paths": {
+            "voby/*": [
+                "../voby/*"
+            ],
+            "voby/via/*": [
+                "../voby/src/via/*"
+            ],
+            "voby/via": [
+                "../voby/src/via"
+            ],
+            "voby": [
+                "../voby"
+            ],
+            "via/*": [
+                "../via/*"
+            ],
+            "via": [
+                "../via"
+            ],
+            // "voby/jsx-runtime": [
+            //     "../voby/src/jsx"
+            // ],
+            // "voby/jsx-runtime/*": [
+            //     "../voby/src/jsx/*"
+            // ],
+        },
+        "typeRoots": [
+            "./node_modules/@types",
+            // "./node_modules/babel-plugin-jsx-dom-expressions",
+            "./types",
+        ],
+        "types": [
+            "via"
+        ]
+    },
+    "include": [
+        // "voby/src/jsx/index.ts"
+    ],
+    "exclude": [
+        "vite.config.ts",
+        "vite.dev.dom-in-worker.ts",
+        "vite.dev.worker-calls.ts",
+    ]
+    // "include": [
+    //     "src"
+    // ],
+    // "files": [
+    //     "src/index.ts"
+    // ]
+}
