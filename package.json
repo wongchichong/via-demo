@@ -12,10 +12,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "oby": "workspace:*",
-        "via": "workspace:*",
-        "vite": "^4.1.4",
-        "voby": "workspace:*"
+        "oby": "workspace:../oby",
+        "via": "workspace:../via",
+        "voby": "workspace:../voby",
+        "vite": "^4.1.4"
     },
     "devDependencies": {
         "typescript": "^4.9.5"
