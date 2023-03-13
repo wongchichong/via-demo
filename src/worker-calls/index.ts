@@ -1,6 +1,6 @@
 import 'via/controller'
 
-import { PrimeCalculator } from './PrimeCalculator'
+import type { PrimeCalculator } from './PrimeCalculator'
 import MyWorker from './worker?worker'
 
 
