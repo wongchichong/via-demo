@@ -3,6 +3,8 @@
 
 import 'via/controller'
 import 'via/receiver'
+import { ViaClass } from 'via'
+
 import MyWorker from './worker?worker'
 
 let worker = null

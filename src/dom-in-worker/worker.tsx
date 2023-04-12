@@ -1,11 +1,9 @@
-/// <reference path='../../../via/dist/controller/index.d.ts' />
-
 "use strict"
 
 //first line before voby initialization
-import * as React from 'voby'
-import { render } from 'voby/via'
-import { $, useEffect } from 'voby'
+import * as React from 'voby/via'
+import { ViaClass } from 'via'
+import { $, useEffect, render, } from 'voby/via'
 
 
 declare global {
@@ -16,7 +14,7 @@ declare global {
 }
 
 const Via = self.Via
-const via: ViaType & Window & typeof globalThis & { audioContext?: AudioContext } = self.via
+const via: ViaClass & Window & typeof globalThis & { audioContext?: AudioContext } = self.via
 const get = self.get
 
 self.addEventListener("message", e => {
@@ -38,7 +36,7 @@ self.addEventListener("message", e => {
 })
 
 const F = () => { //comp
-    const h = $(1, { tag: 'fh $' })
+    const h = $(1)
     return <span>
         <span>FFFF</span>
         <h3>{h()}</h3>
@@ -50,7 +48,7 @@ const F = () => { //comp
 
 
 const G = () => { //comp
-    const h = $(1, { tag: 'gh $' })
+    const h = $(1)
     const c = $('#' + (h() * 100))
 
     return <span>
@@ -64,7 +62,7 @@ const G = () => { //comp
 }
 
 const D = () => { //comp
-    const state = $(0, { tag: 'D state $' })
+    const state = $(0)
 
     return <span>
         <span>DDDD</span>
@@ -79,7 +77,7 @@ const D = () => { //comp
 }
 
 const J = () => { //comp
-    const h = $(1, { tag: 'jh $' })
+    const h = $(1)
 
     return <span>
         <span>JJJJ</span>
@@ -99,13 +97,13 @@ const Label = ({ label, ...p }: { label?: string }) => {
 
 
 const Comp = () => {
-    const state = $(1, { tag: 'state $' })
-    const h = $(1, { tag: 'head $' })
-    const t = $(1, { tag: 'tail $' })
+    const state = $(1)
+    const h = $(1)
+    const t = $(1)
 
     useEffect(() => {
         console.log("State:" + state())
-    }, { tag: 'state changed' })
+    })
 
     return <div>
         <h3><F /></h3>

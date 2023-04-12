@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hook up Via's messages with the worker's postMessage bridge
     Via.postMessage = (data => worker.postMessage(data))
-    worker.onmessage = (e => Via.OnMessage(e.data))
+    worker.onmessage = (e => Via.onMessage(e.data))
 
     // Start the worker
     worker.postMessage("start")
